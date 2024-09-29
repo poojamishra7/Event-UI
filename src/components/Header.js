@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link , useNavigate} from 'react-router-dom';
+import { CartContext } from '../context/CartContext';
+import './Header.css';
 const additionalItems = [
   'Photography',
   'Anchor',
@@ -64,7 +66,7 @@ const Header = () => {
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState('');
   const [isCollapsed, setIsCollapsed] = useState(true);
-
+  const {cartItems} = useContext(CartContext);
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
   };
@@ -117,7 +119,15 @@ const Header = () => {
   return (
     <>
       {/* First Navbar */}
-      <nav className="navbar navbar-expand-lg navbar-light bg-light navbar1">
+      <div style={{
+        position: 'sticky',
+        top: 0, // Specifies the top offset when sticky
+        backgroundColor: '#fff', // Background color
+        padding: '10px 20px', // Padding for the header
+        boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)', // Optional shadow for depth
+        zIndex: 1000, // Ensure it stays above other content
+      }}>
+      <nav className="navbar navbar-expand-lg navbar-light bg-light navbar1" >
         <div className="brand-location">
           <a className="navbar-brand fw-bold" href="#">Event Planner</a>
           <a className="navbar-brand" href="index.html">
@@ -136,8 +146,9 @@ const Header = () => {
           />
           <button className="btn getQuotesBtn mx-2 px-4" type="button">Get Free Quotes</button>
           <button className="btn getQuotesBtn mx-2 px-4" type="button" onClick={handleLoginClick}>Login Now</button>
-          <a className="nav-link m-0 p-4 cartIcon" href="#">
+          <a className="nav-link m-0 p-4 cartIcon" href="/cart" style={{position:'relative'}}>
             <i className="fas fa-shopping-cart"></i>
+            {cartItems.length > 0 && <span className='cart-span'>{cartItems.length}</span>}
           </a>
         </div>
       </nav>
@@ -171,6 +182,7 @@ const Header = () => {
           </ul>
         </div>
       </nav>
+      </div>
     </>
   );
 };

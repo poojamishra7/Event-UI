@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect , useContext} from 'react';
 import { useParams, useLocation } from 'react-router-dom';
 import productImage from '../assets/images/Birthday/Rectangle 12-1.png';
 import backgroundImage from '../assets/images/Birthday/Rectangle 12-10.png';
 import { useBreadcrumbs } from '../context/BreadcrumContext';
 import Breadcrumbs from '../components/Breadcrum';
-
+import { CartContext } from '../context/CartContext';
+import product_list from '../assets/json/services.json';
 const FilterSection = ({ title, filters, setFilters }) => (
   <>
     <h5 className="mt-4 mb-3">{title}</h5>
@@ -62,7 +63,9 @@ const EventService = () => {
     'sport': false,
     'carnival': false,
   });
-
+  const { addToCart } = useContext(CartContext);
+  console.log(addToCart);
+  const products = product_list.Products || [];
   const resetSelection = () => {
     setSearchTerm('');
     setPriceFilters({
@@ -151,23 +154,23 @@ const EventService = () => {
             <div className="col-lg-9">
               <div className="service-section ss2">
                 <div className="cards-row">
-                  {Array(10).fill(null).map((_, index) => (
+                  {products.map((item, index) => (
                     <div className="card" key={index}>
                       <div className="card-image">
-                        <img src={productImage} alt={`Service ${index + 1}`} />
+                        <img src={`https://simsonseventimages.s3.ap-south-1.amazonaws.com/EventImages${item.image}`} alt={item.name} />
                         <div className="cart-icon">
-                          <i className="fa-solid fa-cart-plus"></i>
+                          <i className="fa-solid fa-cart-plus" onClick={() => addToCart(item)}></i>
                         </div>
                         <div className="wishlist-btn">
                           <button>Add to Wishlist</button>
                         </div>
                       </div>
                       <div className="card-info">
-                        <p>4.2 <i className="fa fa-star"></i> <span>(56)</span></p>
-                        <h2>Service {index + 1}</h2>
+                        <p>{item.review.rating} <i className="fa fa-star"></i> <span>({item.review.total_reviews})</span></p>
+                        <h2>{item.name}</h2>
                       </div>
                       <hr />
-                      <h6>Price <a href="#">₹500</a></h6>
+                      <h6>Price <a href="#">{item.price}</a></h6>
                     </div>
                   ))}
                 </div>

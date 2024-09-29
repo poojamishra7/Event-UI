@@ -14,7 +14,6 @@ import Home from './Home';
 import {DataProvider}  from '../context/DataContext.js';
 const LandingPage = props => {
     return (
-        <DataProvider>
         <div>
             <Home />
             <Services />
@@ -28,7 +27,6 @@ const LandingPage = props => {
             <CommonQuestion />
             <OurOffice />
         </div>
-        </DataProvider>
     )
 }
 

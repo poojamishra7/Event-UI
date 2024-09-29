@@ -103,5 +103,128 @@
             "label": "Entrance Setup",
             "price": "₹500"
         }
+    ],
+    "Products" : [
+        {
+            "id":1,
+            "image": "/Birthday/Image2.png",
+            "review": {
+                "rating": 4.2,
+                "total_reviews": 56
+            },
+            "name": "Confetti",
+            "price": "500"
+        },
+        {
+            "id":2,
+            "image": "/Birthday/Image2.png",
+            "review": {
+                "rating": 4.2,
+                "total_reviews": 56
+            },
+            "name": "Steamers",
+            "price": "500"
+        },
+        {   
+            "id":3,
+            "image": "/Birthday/Image2.png",
+            "review": {
+                "rating": 4.2,
+                "total_reviews": 56
+            },
+            "name": "Balloon Design",
+            "price": "500"
+        },
+        {   
+            "id":4,
+            "image": "/Birthday/Image2.png",
+            "review": {
+                "rating": 4.2,
+                "total_reviews": 56
+            },
+            "name": "Garlands",
+            "price": "500"
+        },
+        {
+            "id":5,
+            "image": "/Birthday/Image2.png",
+            "review": {
+                "rating": 4.2,
+                "total_reviews": 56
+            },
+            "name": "Cake Toppers",
+            "price": "500"
+        },
+        {
+            "id":6,
+            "image": "/Birthday/Image2.png",
+            "review": {
+                "rating": 4.2,
+                "total_reviews": 56
+            },
+            "name": "Party Favors",
+            "price": "500"
+        },
+        {
+            "id":7,
+            "image": "/Birthday/Image2.png",
+            "review": {
+                "rating": 4.2,
+                "total_reviews": 56
+            },
+            "name": "Tablecloths",
+            "price": "500"
+        },
+        {
+            "id":8,
+            "image": "/Birthday/Image2.png",
+            "review": {
+                "rating": 4.2,
+                "total_reviews": 56
+            },
+            "name": "Ribbons",
+            "price": "500"
+        },
+        {
+            "id":8,
+            "image": "/Birthday/Image2.png",
+            "review": {
+                "rating": 4.2,
+                "total_reviews": 56
+            },
+            "name": "Fairy Lights",
+            "price": "500"
+        },
+        {
+            "id":9,
+            "image": "/Birthday/Image2.png",
+            "review": {
+                "rating": 4.2,
+                "total_reviews": 56
+            },
+            "name": "Chair Covers",
+            "price": "500"
+        },
+        {
+            "id":10,
+            "image": "/Birthday/Image2.png",
+            "review": {
+                "rating": 4.2,
+                "total_reviews": 56
+            },
+            "name": "Hanging Swirl",
+            "price": "500"
+        },
+        {
+            "id":11,
+            "image": "/Birthday/Image2.png",
+            "review": {
+                "rating": 4.2,
+                "total_reviews": 56
+            },
+            "name": "Table Runners",
+            "price": "500"
+        }
     ]
+    
 }

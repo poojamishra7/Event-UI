@@ -1,10 +1,10 @@
 import React from 'react';
 
-const ProductCard = ({ image, name, price }) => {
+const ProductCard = ({ image, name, price, quantity, onQuantityChange, onRemove }) => {
   return (
     <div className="row product-row">
       <div className="col-4 col-md-2">
-        <img src={image} alt="Product Image" className="product-image" />
+        <img src={`https://simsonseventimages.s3.ap-south-1.amazonaws.com/EventImages${image}`} alt="Product Image" className="product-image" />
       </div>
       <div className="col-8 col-md-8">
         <h5>{name}</h5>
@@ -14,18 +14,15 @@ const ProductCard = ({ image, name, price }) => {
         </div>
         <div className="d-flex align-items-center">
           <div className="quantity-dropdown ml-2">
-            <select className="form-control form-control-sm">
-              <option selected>Qty: 1</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
+            <select className="form-control form-control-sm" value={quantity}  onChange={(e) => onQuantityChange(e.target.value)}>
+              {[...Array(6).keys()].map(num => (
+                <option key={num} value={num}>{num === 0 ? 'Remove' : num}</option>
+              ))}
             </select>
             <i className="fas fa-chevron-down dropdown-icon"></i>
           </div>
           <div className="action-links ml-3 px-4">
-            <a href="#">Delete</a>
+            <a href="#" onClick={onRemove}>Delete</a>
             <a href="#">Save for Later</a>
             <a href="#">See more like this</a>
           </div>
