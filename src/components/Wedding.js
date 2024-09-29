@@ -4,7 +4,9 @@ import PropTypes from 'prop-types';
 
 const Wedding = ({ title = 'Weddings', description = 'Weddings made Easy with Customized Design' }) => {
     const [selectedCategory, setSelectedCategory] = useState('MANDAP');
+    debugger
     const {data} = useContext(DataContext);
+    console.log(data);
     const {Wedding} = data;
     const handleCategoryClick = (category) => {
       setSelectedCategory(category);
