@@ -1,0 +1,107 @@
+{
+    "Services": [
+        {
+            "src": "/Birthday/Image7.png",
+            "title": "Birthday Party",
+            "description": "Turning Moments into Milestones"
+        },
+        {
+            "src": "/Birthday/Image12.png",
+            "title": "Anniversary",
+            "description": "Celebrating Your Love Story"
+        },
+        {
+            "src": "/Birthday/Image3.png",
+            "title": "Weddings",
+            "description": "Your Dream Wedding, Perfectly Planned"
+        },
+        {
+            "src": "/Weddings/Image2.png",
+            "title": "Engagement",
+            "description": "Begin Forever with Style"
+        },
+        {
+            "src": "/Birthday/Image8.png",
+            "title": "Corporate Events",
+            "description": "Professional Events, Seamlessly Executed"
+        },
+        {
+            "src": "/Birthday/Image2.png",
+            "title": "Welcome Baby",
+            "description": "A Grand Welcome for Your Little One"
+        },
+        {
+            "src": "/Birthday/Image11.png",
+            "title": "Inauguration Ceremony",
+            "description": "Opening Doors to New Beginnings"
+        },
+        {
+            "src": "/Birthday/Image12.png",
+            "title": "Bachelor Party",
+            "description": "Celebrate Freedom in Style"
+        },
+        {
+            "src": "/Birthday/Image3.png",
+            "title": "Baby Shower",
+            "description": "Showering Your Baby with Love"
+        },
+        {
+            "src": "/Birthday/Image4.png",
+            "title": "Photography",
+            "description": "Bringing Festive Magic to Your Space"
+        }
+    ],
+    "Trending_Design": {
+        "wed18Img": "/Weddings/Image5.png",
+        "wed12Img": "/Birthday/Image1.png",
+        "wed17Img": "/Weddings/Image4.png",
+        "wed21Img": "/Get a glimpse/Image4.png"
+    },
+    "Additional": [
+        {
+            "src": "/Birthday/Image2.png",
+            "label": "Cold Pyro",
+            "price": "₹500"
+        },
+        {
+            "src": "/Birthday/Image11.png",
+            "label": "Smoke",
+            "price": "₹500"
+        },
+        {
+            "src": "/Birthday/Image12.png",
+            "label": "Paper Blast",
+            "price": "₹500"
+        },
+        {
+            "src": "/Birthday/Image3.png",
+            "label": "Varmala",
+            "price": "₹500"
+        },
+        {
+            "src": "/Birthday/Image4.png",
+            "label": "Selfie Booth",
+            "price": "₹500"
+        },
+        {
+            "src": "/Birthday/Image5.png",
+            "label": "360 Photo Booth",
+            "price": "₹500"
+        },
+        {
+            "src": "/Birthday/Image6.png",
+            "label": "Color Blast",
+            "price": "₹500"
+        },
+        {
+            "src": "/Birthday/Image7.png",
+            "label": "Centerpiece",
+            "price": "₹500"
+        },
+        {
+            "src": "/Birthday/Image8.png",
+            "label": "Entrance Setup",
+            "price": "₹500"
+        }
+    ]
+}
