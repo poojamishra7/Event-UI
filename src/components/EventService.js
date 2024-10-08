@@ -1,7 +1,5 @@
 import React, { useState, useEffect , useContext} from 'react';
 import { useParams, useLocation } from 'react-router-dom';
-import productImage from '../assets/images/Birthday/Rectangle 12-1.png';
-import backgroundImage from '../assets/images/Birthday/Rectangle 12-10.png';
 import { useBreadcrumbs } from '../context/BreadcrumContext';
 import Breadcrumbs from '../components/Breadcrum';
 import { CartContext } from '../context/CartContext';
@@ -111,7 +109,7 @@ const EventService = () => {
           'width': '100%' , 
           'height': '60vh', 
           backgroundSize: 'cover',
-          backgroundImage: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url(/assets/images/Birthday/Rectangle%2012-10.png)'}}>
+          backgroundImage: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url(https://simsonseventimages.s3.ap-south-1.amazonaws.com/EventImages/Birthday/Image11.png)'}}>
           <div className="content text-center serviceCont">
             <h1>{isSpecialService ? formattedOccasionType : `${formattedOccasionType} Event Decoration Services`}</h1>
             <h6><Breadcrumbs /></h6>

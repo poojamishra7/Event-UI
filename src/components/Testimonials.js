@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import rectangle16Image from '../assets/images/Weddings/Rectangle 16.png';
 const Testimonials = () => {
     const carouselRef = useRef(null);
 
@@ -35,7 +34,7 @@ const Testimonials = () => {
                             <div className="card py-3 px-4">
                                 <div className="row justify-content-center">
                                     <div className="col-lg-5 pb-5">
-                                        <img src={rectangle16Image} className="img-fluid profile-pic mb-4 mt-3" alt='profile'/>
+                                        <img src={'https://simsonseventimages.s3.ap-south-1.amazonaws.com/EventImages/Weddings/Image3.png'} className="img-fluid profile-pic mb-4 mt-3" alt='profile'/>
                                     </div>
                                     <div className="col-lg-7">
                                         <i className="fa-solid fa-quote-left"></i>
