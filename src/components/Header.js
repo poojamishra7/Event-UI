@@ -129,7 +129,7 @@ const Header = () => {
       }}>
       <nav className="navbar navbar-expand-lg navbar-light bg-light navbar1" >
         <div className="brand-location">
-          <a className="navbar-brand fw-bold" href="#">Event Planner</a>
+          <a className="navbar-brand fw-bold" href="/">Event Planner</a>
           <a className="navbar-brand" href="index.html">
             <i className="fa-solid fa-location-dot fa-1x"></i>
           </a>

@@ -1,8 +1,4 @@
 import React from 'react'
-import glimp18 from '../assets/images/Get a glimpse/Rectangle 18.png';
-import glimp19 from '../assets/images/Get a glimpse/Rectangle 19.png';
-import glimp20 from '../assets/images/Get a glimpse/Rectangle 20.png';
-import glimp21 from '../assets/images/Get a glimpse/Rectangle 21.png';
 const BestWork = () => {
   return (
     <div className="work-section mt-5">
@@ -21,7 +17,7 @@ const BestWork = () => {
                 <div className="row">
                     <div className="col-6 col-md-3">
                         <div className="image-container">
-                            <img src={glimp18} alt="Image 1" className="img-fluid"/>
+                            <img src={'https://simsonseventimages.s3.ap-south-1.amazonaws.com/EventImages/Get%20a%20glimpse/Image1.png'} alt="Image 1" className="img-fluid"/>
                             <div className="image-title">
                                 <h4>Arpith & Benjamin</h4>
                                 <h6>10+ Photos</h6>
@@ -30,7 +26,7 @@ const BestWork = () => {
                     </div>
                     <div className="col-6 col-md-3">
                         <div className="image-container">
-                            <img src={glimp19} alt="Image 2" className="img-fluid"/>
+                            <img src={'https://simsonseventimages.s3.ap-south-1.amazonaws.com/EventImages/Get%20a%20glimpse/Image2.png'} alt="Image 2" className="img-fluid"/>
                             <div className="image-title">
                                 <h4>Aurko & Vini</h4>
                                 <h6>10+ Photos</h6>
@@ -39,7 +35,7 @@ const BestWork = () => {
                     </div>
                     <div className="col-6 col-md-3">
                         <div className="image-container">
-                            <img src={glimp20} alt="Image 3" className="img-fluid"/>
+                            <img src={'https://simsonseventimages.s3.ap-south-1.amazonaws.com/EventImages/Get%20a%20glimpse/Image3.png'} alt="Image 3" className="img-fluid"/>
                             <div className="image-title">
                                 <h4>Nidhi & Dhruv</h4>
                                 <h6>10+ Photos</h6>
@@ -48,7 +44,7 @@ const BestWork = () => {
                     </div>
                     <div className="col-6 col-md-3">
                         <div className="image-container">
-                            <img src={glimp21} alt="Image 4" className="img-fluid"/>
+                            <img src={'https://simsonseventimages.s3.ap-south-1.amazonaws.com/EventImages/Get%20a%20glimpse/Image4.png'} alt="Image 4" className="img-fluid"/>
                             <div className="image-title">
                                 <h4>Palishree & Shezhaad</h4>
                                 <h6>10+ Photos</h6>

@@ -5,8 +5,8 @@
     import CommonQuestion from './CommonQuestion';
     import { CartContext } from '../context/CartContext';
     const products = [
-        { image: 'assets/images/Birthday/Rectangle 12-10.png', name: 'Garlands', price: '2000' },
-        { image: 'assets/images/Weddings/Rectangle 15.png', name: 'Tablecloths', price: '3500' }
+        { image: 'https://simsonseventimages.s3.ap-south-1.amazonaws.com/EventImages/Birthday/Image11.png', name: 'Garlands', price: '2000' },
+        { image: 'https://simsonseventimages.s3.ap-south-1.amazonaws.com/EventImages/Weddings/Image2.png', name: 'Tablecloths', price: '3500' }
     ];
 
     const ShoppingCart = () => {
@@ -33,7 +33,7 @@
                                     <h5 className="price-title">Price  {total}</h5>
                                 </div>
                                 <hr />
-                                {cartItems.length === 0 ? (
+                                {cartItems && cartItems.length === 0 ? (
                                     <p>Cart is empty</p>
                                     ) : (
                                         cartItems.map((product, index) => (

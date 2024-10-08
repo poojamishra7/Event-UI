@@ -1,5 +1,4 @@
 import React from 'react'
-import bgImg from '../assets/images/Weddings/Rectangle_16.png';
 import InquiryForm from './InquiryForm';
 const Home = () => {
     const save_enquiry_data = () =>{
@@ -15,7 +14,7 @@ const Home = () => {
         </div>
         <div className="carousel-inner">
             <div className="carousel-item active"  style={{
-              background: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url(${bgImg})`,
+              background: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url(${'https://simsonseventimages.s3.ap-south-1.amazonaws.com/EventImages/Weddings/Image3.png'})`,
               backgroundSize: 'cover'
             }}>
                 <div className="carousel-caption d-md-block">
