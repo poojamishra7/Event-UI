@@ -177,7 +177,7 @@ const Header = () => {
             <NavDropdown id="engagement" label="Engagements Ceremony" items={engagementItems} />
             <NavDropdown id="additional" label="Additional Events" items={additionalItems} />
             <li className="nav-item">
-              <a className="nav-link" href="#">Account</a>
+              <a className="nav-link" href="/">Account</a>
             </li>
           </ul>
         </div>
