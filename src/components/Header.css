@@ -3,3 +3,8 @@
     top: 0;
     left: 50%;
 }
+.dropdown-item:hover{
+    background-color: #ED3D63;
+}
+
+

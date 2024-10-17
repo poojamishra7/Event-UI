@@ -113,7 +113,6 @@ const Header = () => {
 
   
   const handleLoginClick = () => {
-    debugger
       navigate('/sign-in'); // Navigate to the login page
   };
   return (
@@ -121,15 +120,15 @@ const Header = () => {
       {/* First Navbar */}
       <div style={{
         position: 'sticky',
-        top: 0, // Specifies the top offset when sticky
-        backgroundColor: '#fff', // Background color
-        padding: '10px 20px', // Padding for the header
-        boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)', // Optional shadow for depth
-        zIndex: 1000, // Ensure it stays above other content
+        top: 0,
+        backgroundColor: '#fff',
+        padding: '10px 20px',
+        boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)', 
+        zIndex: 1000, 
       }}>
       <nav className="navbar navbar-expand-lg navbar-light bg-light navbar1" >
         <div className="brand-location">
-          <a className="navbar-brand fw-bold" href="/">Event Planner</a>
+          <Link className="navbar-brand fw-bold" to="/">Event Planner</Link>
           <a className="navbar-brand" href="index.html">
             <i className="fa-solid fa-location-dot fa-1x"></i>
           </a>
@@ -177,7 +176,7 @@ const Header = () => {
             <NavDropdown id="engagement" label="Engagements Ceremony" items={engagementItems} />
             <NavDropdown id="additional" label="Additional Events" items={additionalItems} />
             <li className="nav-item">
-              <a className="nav-link" href="/">Account</a>
+              <Link className="nav-link" to="/account">Account</Link>
             </li>
           </ul>
         </div>
