@@ -935,6 +935,7 @@ p {
     background-color: #ED3D63;
     margin-top: 5%;
     line-height: 100%;
+    cursor: pointer;
 }
 
 .footer li p i {
@@ -993,6 +994,7 @@ p {
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .search-bar {

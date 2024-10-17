@@ -62,7 +62,6 @@ const EventService = () => {
     'carnival': false,
   });
   const { addToCart } = useContext(CartContext);
-  console.log(addToCart);
   const products = product_list.Products || [];
   const resetSelection = () => {
     setSearchTerm('');

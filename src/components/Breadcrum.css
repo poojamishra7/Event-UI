@@ -1,0 +1,6 @@
+.breadcrumb-item.active{
+    color: white !important;
+}
+.breadcrumb-item a{
+    color: white !important;
+}
