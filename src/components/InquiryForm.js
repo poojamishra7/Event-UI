@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 const InquiryForm = () => {
+    const [startDate, setStartDate] = useState(null);
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
@@ -14,24 +16,22 @@ const InquiryForm = () => {
         eventDate: '',
     });
     let [error_msg, setMsg] = useState("");
-    // Handle form input changes
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
         if (name === 'name') {
-            // Allow only letters and spaces
             const filteredValue = value.replace(/[^a-zA-Z\s]/g, '');
             setFormData((prevData) => ({
                 ...prevData,
                 [name]: filteredValue,
             }));
         } else if (name === 'phone') {
-            // Allow only digits
             const filteredValue = value.replace(/[^\d]/g, '');
             setFormData((prevData) => ({
                 ...prevData,
                 [name]: filteredValue,
             }));
         } else {
+            debugger;
             setFormData((prevData) => ({
                 ...prevData,
                 [name]: type === 'checkbox' ? checked : value,
@@ -67,7 +67,6 @@ const InquiryForm = () => {
         }
         return isValid;
     };
-    // Handle form submission
     const saveEnquiryData = async (e) => {
         e.preventDefault();
         if (validateForm()) {
@@ -117,24 +116,34 @@ const InquiryForm = () => {
             {errors.phone && <span className="error">{errors.phone}</span>}
             <div className="mb-3">
                 <label htmlFor="eventDate" className="form-label">Event Date</label>
-                <input
-                    type="date"
-                    className="form-control"
-                    name='eventDate'
-                    value={formData.eventDate}
-                    onChange={handleChange}
-                />
+                <div className="input-group">    
+                    <DatePicker
+                        selected={startDate}
+                        onChange={(date) => {
+                            setStartDate(date);
+                            setFormData((prevData) => ({
+                                ...prevData,
+                                eventDate: date,
+                            }));
+                        }}
+                        dateFormat="dd/MM/yyyy"
+                        className="form-control"
+                        placeholderText="Select Event Date"
+                        style={{ width: '100%' }}
+                    />
+                </div>
             </div>
             {errors.eventDate && <span className="error">{errors.eventDate}</span>}
             <div className="form-check mb-3">
                 <input
+                    name='whatsappUpdates'
                     className="form-check-input mt-1"
                     type="checkbox"
                     id="whatsappUpdates"
                     checked={formData.whatsappUpdates}
                     onChange={handleChange}
                 />
-                <label className="form-check-label" htmlFor="whatsappUpdates">
+                <label className="form-check-label" htmlFor="whatsappUpdates" style={{'paddingTop': '0%'}}>
                     Send me updates on WhatsApp
                 </label>
             </div>
