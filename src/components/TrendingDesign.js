@@ -14,13 +14,13 @@ const TrendingDesign = () => {
                 <div className="row">
                     <div className="col-12 col-md-7">
                         <div className="gallery-img">
-                            <img src={imageUrlPre + design.wed18Img} alt="Image 1" className="img-fluid"/>
+                            <img src={imageUrlPre + design.wed18Img} alt="" className="img-fluid"/>
                             <div className="img-title">Weddings</div>
                         </div>
                     </div>
                     <div className="col-12 col-md-5">
                         <div className="gallery-img">
-                            <img src={imageUrlPre + design.wed12Img} alt="Image 2" className="img-fluid"/>
+                            <img src={imageUrlPre + design.wed12Img} alt="" className="img-fluid"/>
                             <div className="img-title">Engagement</div>
                         </div>
                     </div>
@@ -28,13 +28,13 @@ const TrendingDesign = () => {
                 <div className="row">
                     <div className="col-12 col-md-5">
                         <div className="gallery-img">
-                            <img src={imageUrlPre + design.wed17Img} alt="Image 3" className="img-fluid"/>
+                            <img src={imageUrlPre + design.wed17Img} alt="" className="img-fluid"/>
                             <div className="img-title">Anniversary</div>
                         </div>
                     </div>
                     <div className="col-12 col-md-7">
                         <div className="gallery-img">
-                            <img src={imageUrlPre + design.wed18Img} alt="Image 4" className="img-fluid"/>
+                            <img src={imageUrlPre + design.wed18Img} alt="" className="img-fluid"/>
                             <div className="img-title">Welcome Baby</div>
                         </div>
                     </div>
@@ -42,7 +42,7 @@ const TrendingDesign = () => {
             </div>
             <div className="col-12 col-md-3 sidebar">
                 <div className="gallery-img h-100">
-                    <img src={imageUrlPre + design.wed21Img} alt="Image 5" className="img-fluid h-100"/>
+                    <img src={imageUrlPre + design.wed21Img} alt="" className="img-fluid h-100"/>
                     <div className="img-title">Birthday Party</div>
                 </div>
             </div>

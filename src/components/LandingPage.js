@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import OurOffice from './OurOffice';
 import CommonQuestion from './CommonQuestion';
 import About from './About';
@@ -11,21 +10,25 @@ import Wedding from './Wedding.js';
 import Additional from './Additional';
 import Services from "./Services";
 import Home from './Home';
-import {DataProvider}  from '../context/DataContext.js';
-const LandingPage = props => {
+let LandingPage =  ({
+    homeRef,
+    servicesRef,
+    aboutRef,
+    ourOfficeRef
+}) => {
     return (
         <div>
-            <Home />
-            <Services />
+            <div ref={homeRef}><Home /></div>
+            <div ref={servicesRef}><Services /></div>
             <Additional />
             <Wedding />
             <TrendingDesign />
             <BestWork />
             <BestSelling />
             <Testimonials />
-            <About />
+            <div ref={aboutRef}><About /></div>
             <CommonQuestion />
-            <OurOffice />
+            <div ref={ourOfficeRef}><OurOffice /></div>
         </div>
     )
 }

@@ -111,9 +111,9 @@ const AuthComponent = () => {
           <form onSubmit={(e) => handleSubmit(e, 'signup')} className="login-form">
             <h1 className="head1">Create Account</h1>
             <div className="social-container">
-              <a href="#" className="social"><i className="fab fa-facebook-f"></i></a>
-              <a href="#" className="social"><i className="fab fa-google-plus-g"></i></a>
-              <a href="#" className="social"><i className="fab fa-linkedin-in"></i></a>
+              <a href="www.facbook.com" className="social"><i className="fab fa-facebook-f"></i></a>
+              <a href="www.google.com" className="social"><i className="fab fa-google-plus-g"></i></a>
+              <a href="www.linkedin.com" className="social"><i className="fab fa-linkedin-in"></i></a>
             </div>
             <span className="span-text">or use your email for registration</span>
             <input
@@ -154,9 +154,9 @@ const AuthComponent = () => {
           <form onSubmit={(e) => handleSubmit(e, 'signin')} className="login-form">
             <h1 className="head1">Sign in</h1>
             <div className="social-container">
-              <a href="#" className="social"><i className="fab fa-facebook-f"></i></a>
-              <a href="#" className="social"><i className="fab fa-google-plus-g"></i></a>
-              <a href="#" className="social"><i className="fab fa-linkedin-in"></i></a>
+              <a href="www.facebook.com" className="social"><i className="fab fa-facebook-f"></i></a>
+              <a href="www.google.com" className="social"><i className="fab fa-google-plus-g"></i></a>
+              <a href="www.linkedin.com" className="social"><i className="fab fa-linkedin-in"></i></a>
             </div>
             <span className="span-text">or use your account</span>
             <input
@@ -177,7 +177,7 @@ const AuthComponent = () => {
               onChange={handleChange}
             />
             {errors.password && <p className="error">{errors.password}</p>}
-            <a href="#">Forgot your password?</a>
+            <a href="/">Forgot your password?</a>
             <button type="submit" className="login-btn" disabled={loading}>
               {loading ? 'Signing In...' : 'Sign In'}
             </button>

@@ -5,7 +5,7 @@ const About = () => {
             <div className="container text-center">
                 <div className="row">
                     <div className="col-lg-5 col-md-6 col-sm-12">
-                        <img src={'https://simsonseventimages.s3.ap-south-1.amazonaws.com/EventImages/Weddings/Image4.png'} alt="Image 5" className="gallery-img" />
+                        <img src={'https://simsonseventimages.s3.ap-south-1.amazonaws.com/EventImages/Weddings/Image4.png'} alt="" className="gallery-img" />
                     </div>
                     <div className="col-lg-7 col-md-6 col-sm-12 text-start  justify-content-center align-items-center ">
                         <h2 className="mt-5 px-5">Who We Are</h2>

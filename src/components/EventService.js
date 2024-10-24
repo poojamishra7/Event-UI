@@ -135,7 +135,7 @@ const EventService = () => {
                   <h5>Filter Birthday</h5>
                 </div>
                 <div className="filter-right">
-                  <a onClick={resetSelection} className="reset-btn">Reset</a>
+                  <button onClick={resetSelection} className="reset-btn">Reset</button>
                 </div>
               </div>
               <div className="search-bar">
@@ -155,7 +155,7 @@ const EventService = () => {
                 <FilterSection title="By Gender" filters={genderFilters} setFilters={setGenderFilters} />
                 <FilterSection title="By Theme" filters={themeFilters} setFilters={setThemeFilters} />
                 <br />
-                <a href="#" className="">More</a>
+                <a href="/" className="">More</a>
               </div>
             </div>
             <div className="col-lg-9">
@@ -177,7 +177,7 @@ const EventService = () => {
                         <h2>{item.name}</h2>
                       </div>
                       <hr />
-                      <h6>Price <a href="#">{item.price}</a></h6>
+                      <h6>Price <span>{item.price}</span></h6>
                     </div>
                   ))}
                 </div>
