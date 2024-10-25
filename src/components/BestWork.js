@@ -17,7 +17,7 @@ const BestWork = () => {
                 <div className="row">
                     <div className="col-6 col-md-3">
                         <div className="image-container">
-                            <img src={'https://simsonseventimages.s3.ap-south-1.amazonaws.com/EventImages/Get%20a%20glimpse/Image1.png'} alt="Image 1" className="img-fluid"/>
+                            <img src={'https://simsonseventimages.s3.ap-south-1.amazonaws.com/EventImages/Get%20a%20glimpse/Image1.png'} alt="" className="img-fluid"/>
                             <div className="image-title">
                                 <h4>Arpith & Benjamin</h4>
                                 <h6>10+ Photos</h6>
@@ -26,7 +26,7 @@ const BestWork = () => {
                     </div>
                     <div className="col-6 col-md-3">
                         <div className="image-container">
-                            <img src={'https://simsonseventimages.s3.ap-south-1.amazonaws.com/EventImages/Get%20a%20glimpse/Image2.png'} alt="Image 2" className="img-fluid"/>
+                            <img src={'https://simsonseventimages.s3.ap-south-1.amazonaws.com/EventImages/Get%20a%20glimpse/Image2.png'} alt="" className="img-fluid"/>
                             <div className="image-title">
                                 <h4>Aurko & Vini</h4>
                                 <h6>10+ Photos</h6>
@@ -35,7 +35,7 @@ const BestWork = () => {
                     </div>
                     <div className="col-6 col-md-3">
                         <div className="image-container">
-                            <img src={'https://simsonseventimages.s3.ap-south-1.amazonaws.com/EventImages/Get%20a%20glimpse/Image3.png'} alt="Image 3" className="img-fluid"/>
+                            <img src={'https://simsonseventimages.s3.ap-south-1.amazonaws.com/EventImages/Get%20a%20glimpse/Image3.png'} alt="" className="img-fluid"/>
                             <div className="image-title">
                                 <h4>Nidhi & Dhruv</h4>
                                 <h6>10+ Photos</h6>
@@ -44,7 +44,7 @@ const BestWork = () => {
                     </div>
                     <div className="col-6 col-md-3">
                         <div className="image-container">
-                            <img src={'https://simsonseventimages.s3.ap-south-1.amazonaws.com/EventImages/Get%20a%20glimpse/Image4.png'} alt="Image 4" className="img-fluid"/>
+                            <img src={'https://simsonseventimages.s3.ap-south-1.amazonaws.com/EventImages/Get%20a%20glimpse/Image4.png'} alt="" className="img-fluid"/>
                             <div className="image-title">
                                 <h4>Palishree & Shezhaad</h4>
                                 <h6>10+ Photos</h6>

@@ -1026,11 +1026,10 @@ p {
     border: 1px solid #e6e6e6;
     border-radius: 43px;
 }
-
-.pro-list h5::after {
-    content: "-";
-    font-size: 2rem;
-    float: right;
+.pro-list h5 {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -2054,4 +2053,8 @@ p {
 
 .error{
     color: red;
+}
+
+.react-datepicker-wrapper{
+    width: -webkit-fill-available;
 }

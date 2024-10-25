@@ -1,13 +1,11 @@
 
-// src/components/Breadcrumbs.jsx
 import '../components/Breadcrum.css';
 import React from 'react';
-import { Link, useLocation, useParams } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useBreadcrumbs } from '../context/BreadcrumContext';
 
 const Breadcrumbs = () => {
   const { breadcrumbs } = useBreadcrumbs();
-  const location = useLocation();
   return (
     <nav aria-label="breadcrumb">
       <ol className="breadcrumb">

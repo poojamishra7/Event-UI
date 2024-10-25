@@ -125,7 +125,7 @@ const Header = () => {
         padding: '10px 20px',
         boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)', 
         zIndex: 1000, 
-      }}>
+      }} id="top-header">
       <nav className="navbar navbar-expand-lg navbar-light bg-light navbar1" >
         <div className="brand-location">
           <Link className="navbar-brand fw-bold" to="/">Event Planner</Link>

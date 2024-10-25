@@ -19,7 +19,7 @@ const Additional = () => {
                     <button className="popup-button">Add</button>
                   </div>
                   <p className="py-2">{item.label}</p>
-                  <h6>Price <a href="#">{item.price}</a></h6>
+                  <h6>Price <span >{item.price}</span></h6>
                 </div>
               ))}
             </div>

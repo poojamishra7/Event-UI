@@ -4,27 +4,51 @@ import { useBreadcrumbs } from '../context/BreadcrumContext';
 import Breadcrumbs from '../components/Breadcrum';
 import { CartContext } from '../context/CartContext';
 import product_list from '../assets/json/services.json';
-const FilterSection = ({ title, filters, setFilters }) => (
-  <>
-    <h5 className="mt-4 mb-3">{title}</h5>
-    {Object.keys(filters).map((key) => (
-      <div className="form-check" key={key}>
-        <input
-          className="form-check-input"
-          type="checkbox"
-          id={key}
-          checked={filters[key]}
-          onChange={() => setFilters(prev => ({ ...prev, [key]: !prev[key] }))}
-        />
-        <label className="form-check-label" htmlFor={key}>
-          {key.replace(/([A-Z])/g, ' $1')} <small className="text-muted">(0)</small>
-        </label>
-      </div>
-    ))}
-    <hr />
-  </>
-);
+const FilterSection = ({ title, filters, setFilters }) => {
+  const [isCollapsed, setIsCollapsed] = useState(false);
+  const fetchFilteredData = async () => {
+    try {
+      const response = await axios.get('/api/data', {
+        params: { filters } 
+      });
+      console.log(response.data);
+    } catch (error) {
+      console.error('Error fetching filtered data:', error);
+    }
+  };
 
+  useEffect(() => {
+    fetchFilteredData();
+  }, [filters]); 
+  return (
+    <>
+      <h5 className="mt-4 mb-3" onClick={() => setIsCollapsed(!isCollapsed)} style={{ cursor: 'pointer' }}>
+        <span>{title}</span>
+        <span>{isCollapsed ? '+' : '-'}</span>
+      </h5>
+
+      {!isCollapsed && (
+        <>
+          {Object.keys(filters).map((key) => (
+            <div className="form-check" key={key}>
+              <input
+                className="form-check-input"
+                type="checkbox"
+                id={key}
+                checked={filters[key]}
+                onChange={() => setFilters((prev) => ({ ...prev, [key]: !prev[key] }))}
+              />
+              <label className="form-check-label" htmlFor={key}>
+                {key.replace(/([A-Z])/g, ' $1')} <small className="text-muted">(0)</small>
+              </label>
+            </div>
+          ))}
+        </>
+      )}
+      <hr />
+    </>
+  );
+};
 const EventService = () => {
   const { occasionType } = useParams();
   const location = useLocation();
@@ -125,7 +149,7 @@ const EventService = () => {
                   <h5>Filter Birthday</h5>
                 </div>
                 <div className="filter-right">
-                  <a onClick={resetSelection} className="reset-btn">Reset</a>
+                  <button onClick={resetSelection} className="reset-btn">Reset</button>
                 </div>
               </div>
               <div className="search-bar">
@@ -145,7 +169,7 @@ const EventService = () => {
                 <FilterSection title="By Gender" filters={genderFilters} setFilters={setGenderFilters} />
                 <FilterSection title="By Theme" filters={themeFilters} setFilters={setThemeFilters} />
                 <br />
-                <a href="#" className="">More</a>
+                <a href="/" className="">More</a>
               </div>
             </div>
             <div className="col-lg-9">
@@ -167,7 +191,7 @@ const EventService = () => {
                         <h2>{item.name}</h2>
                       </div>
                       <hr />
-                      <h6>Price <a href="#">{item.price}</a></h6>
+                      <h6>Price <span>{item.price}</span></h6>
                     </div>
                   ))}
                 </div>

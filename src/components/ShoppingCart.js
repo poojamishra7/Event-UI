@@ -68,20 +68,20 @@
                                             {products.map((product, index) => (
                                                 <>
                                                     <div key={index} className="col-4">
-                                                        <img src={product.image} alt="Product Image" className="product-image" />
+                                                        <img src={product.image} alt="" className="product-image" />
                                                     </div>
                                                     <div className="col-8">
                                                         <h6>{product.name}</h6>
-                                                        <a href="#" className="">In Stock</a>
+                                                        <a href="/" className="">In Stock</a>
                                                         <div className="gift-text">
-                                                            <input type="checkbox" /> This Will Be A Gift <a href="#">Learn More</a>
+                                                            <input type="checkbox" /> This Will Be A Gift <a href="/">Learn More</a>
                                                         </div>
                                                     </div>
                                                 </>
                                             ))}
                                         </div>
                                     </div>
-                                    <a href="#" className="view-all-link">View All</a>
+                                    <a href="/" className="view-all-link">View All</a>
                                 </div>
                             </div>
                         </div>

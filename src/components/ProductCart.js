@@ -4,13 +4,13 @@ const ProductCard = ({ image, name, price, quantity, onQuantityChange, onRemove 
   return (
     <div className="row product-row">
       <div className="col-4 col-md-2">
-        <img src={`https://simsonseventimages.s3.ap-south-1.amazonaws.com/EventImages${image}`} alt="Product Image" className="product-image" />
+        <img src={`https://simsonseventimages.s3.ap-south-1.amazonaws.com/EventImages${image}`} alt="" className="product-image" />
       </div>
       <div className="col-8 col-md-8">
         <h5>{name}</h5>
-        <a href="#" className="">In Stock</a>
+        <a href="/" className="">In Stock</a>
         <div className="gift-text">
-          <input type="checkbox" /> This Will Be A Gift <a href="#">Learn More</a>
+          <input type="checkbox" /> This Will Be A Gift <a href="/">Learn More</a>
         </div>
         <div className="d-flex align-items-center">
           <div className="quantity-dropdown ml-2">
@@ -22,9 +22,9 @@ const ProductCard = ({ image, name, price, quantity, onQuantityChange, onRemove 
             <i className="fas fa-chevron-down dropdown-icon"></i>
           </div>
           <div className="action-links ml-3 px-4">
-            <a href="#" onClick={onRemove}>Delete</a>
-            <a href="#">Save for Later</a>
-            <a href="#">See more like this</a>
+            <button onClick={onRemove}>Delete</button>
+            <a href="/">Save for Later</a>
+            <a href="/">See more like this</a>
           </div>
         </div>
       </div>
