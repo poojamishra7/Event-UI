@@ -10,7 +10,7 @@ import Login from './components/Login_Signup';
 import Cart from './components/ShoppingCart';
 import { BreadcrumbProvider } from './context/BreadcrumContext';
 import { CartProvider } from './context/CartContext';
-import {DataProvider}  from './context/DataContext.js';
+import { DataProvider }  from './context/DataContext.js';
 
 function App() {
   let homeRef = useRef(null);
@@ -19,12 +19,12 @@ function App() {
   let ourOfficeRef = useRef(null); 
   const scrollToSection = (ref) => {
     if (ref.current) {
-        const topOffset = ref.current.offsetTop;  // Get the top position of the section
-        const headerHeight = document.querySelector('#top-header')?.offsetHeight || 0;  // Adjust for fixed header if any
+        const topOffset = ref.current.offsetTop;  
+        const headerHeight = document.querySelector('#top-header')?.offsetHeight || 0; 
         console.log( topOffset - headerHeight , '::' , headerHeight , ":::" ,topOffset);
         window.scrollTo({
-            top: topOffset - headerHeight,  // Scroll to section position minus header height
-            behavior: 'smooth',  // Smooth scrolling
+            top: topOffset - headerHeight,  
+            behavior: 'smooth',  
         });
     }
 };

@@ -6,6 +6,20 @@ import { CartContext } from '../context/CartContext';
 import product_list from '../assets/json/services.json';
 const FilterSection = ({ title, filters, setFilters }) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
+  const fetchFilteredData = async () => {
+    try {
+      const response = await axios.get('/api/data', {
+        params: { filters } 
+      });
+      console.log(response.data);
+    } catch (error) {
+      console.error('Error fetching filtered data:', error);
+    }
+  };
+
+  useEffect(() => {
+    fetchFilteredData();
+  }, [filters]); 
   return (
     <>
       <h5 className="mt-4 mb-3" onClick={() => setIsCollapsed(!isCollapsed)} style={{ cursor: 'pointer' }}>
