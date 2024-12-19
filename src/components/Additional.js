@@ -1,9 +1,14 @@
 import React from 'react';
 import serviceJson from '../assets/json/services.json';
 const Additional = () => {
-  const items = serviceJson.Additional || [];
-  const sections = [items.slice(0, 3), items.slice(3, 6), items.slice(6)];
-
+  const items = [...(serviceJson.Additional || [])];
+  const sections = [];
+  while (items.length >= 3) {
+    sections.push(items.splice(0, 3));
+  }
+  if (items.length > 0) {
+    sections.push(items);
+  }
   return (
     <div className="additional-elements-section mb-5">
       <h1 className="text-center mb-4 fw-bold">Additional Elements</h1>

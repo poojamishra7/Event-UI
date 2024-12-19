@@ -4,6 +4,7 @@ import { useBreadcrumbs } from '../context/BreadcrumContext';
 import Breadcrumbs from '../components/Breadcrum';
 import { CartContext } from '../context/CartContext';
 import product_list from '../assets/json/services.json';
+import axios from 'axios';
 const FilterSection = ({ title, filters, setFilters }) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const fetchFilteredData = async () => {
