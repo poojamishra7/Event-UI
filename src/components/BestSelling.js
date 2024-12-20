@@ -42,7 +42,7 @@ const BestSelling = () => {
   return (
     <div className="best-selling">
     <div className="container text-center mb-5">
-        <h1 className="mb-5">Check Out Some Of Our Best-Selling Designs</h1>      
+        <h1 className="mb-5">Explore more</h1>      
     
         <div className="row mb-4 align-item-justify text-justify">
             {Object.keys(BestSelling).map((item) => (
