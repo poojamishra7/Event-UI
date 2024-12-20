@@ -6,48 +6,48 @@
             "description": "Turning Moments into Milestones"
         },
         {
-            "src": "/Birthday/Image12.png",
-            "title": "Anniversary",
-            "description": "Celebrating Your Love Story"
-        },
-        {
             "src": "/Birthday/Image3.png",
-            "title": "Weddings",
+            "title": "Wedding Decor",
             "description": "Your Dream Wedding, Perfectly Planned"
         },
         {
             "src": "/Weddings/Image2.png",
-            "title": "Engagement",
+            "title": "Dj Service",
             "description": "Begin Forever with Style"
         },
         {
+            "src": "/Birthday/Image12.png",
+            "title": "Photography",
+            "description": "Celebrating Your Love Story"
+        },
+        {
             "src": "/Birthday/Image8.png",
-            "title": "Corporate Events",
+            "title": "Makeup Artist",
             "description": "Professional Events, Seamlessly Executed"
         },
         {
             "src": "/Birthday/Image2.png",
-            "title": "Welcome Baby",
+            "title": "Fashion",
             "description": "A Grand Welcome for Your Little One"
         },
         {
             "src": "/Birthday/Image11.png",
-            "title": "Inauguration Ceremony",
+            "title": "Venue Consultation",
             "description": "Opening Doors to New Beginnings"
         },
         {
             "src": "/Birthday/Image12.png",
-            "title": "Bachelor Party",
+            "title": "Emcee",
             "description": "Celebrate Freedom in Style"
         },
         {
             "src": "/Birthday/Image3.png",
-            "title": "Baby Shower",
+            "title": "Venue Consultation",
             "description": "Showering Your Baby with Love"
         },
         {
             "src": "/Birthday/Image4.png",
-            "title": "Photography",
+            "title": "Other Occasions",
             "description": "Bringing Festive Magic to Your Space"
         }
     ],
@@ -60,47 +60,57 @@
     "Additional": [
         {
             "src": "/Birthday/Image2.png",
-            "label": "Cold Pyro",
+            "label": "Special Effects",
             "price": "₹500"
         },
         {
             "src": "/Birthday/Image11.png",
-            "label": "Smoke",
+            "label": "Furnitures",
             "price": "₹500"
         },
         {
             "src": "/Birthday/Image12.png",
-            "label": "Paper Blast",
+            "label": "Welcome Decor",
             "price": "₹500"
         },
         {
             "src": "/Birthday/Image3.png",
-            "label": "Varmala",
+            "label": "Accents Decor",
             "price": "₹500"
         },
         {
             "src": "/Birthday/Image4.png",
-            "label": "Selfie Booth",
+            "label": "Traditional Decor",
             "price": "₹500"
         },
         {
             "src": "/Birthday/Image5.png",
-            "label": "360 Photo Booth",
+            "label": "Platforms and Basic",
             "price": "₹500"
         },
         {
             "src": "/Birthday/Image6.png",
-            "label": "Color Blast",
+            "label": "Lightning",
             "price": "₹500"
         },
         {
             "src": "/Birthday/Image7.png",
-            "label": "Centerpiece",
+            "label": "Sound system",
             "price": "₹500"
         },
         {
             "src": "/Birthday/Image8.png",
-            "label": "Entrance Setup",
+            "label": "Tent / Canopy",
+            "price": "₹500"
+        },
+        {
+            "src": "/Birthday/Image8.png",
+            "label": "Logistics",
+            "price": "₹500"
+        },
+        {
+            "src": "/Birthday/Image8.png",
+            "label": "Guest Hospitality",
             "price": "₹500"
         }
     ],

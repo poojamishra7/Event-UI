@@ -5,7 +5,7 @@ const BestWork = () => {
     <div className="container">
         <div className="row">
             <div className="col-8">
-                <h2 className="mb-5">Get A Glimpse Of Some Of Our Best Work From The Past</h2>
+                <h2 className="mb-5">Take a look at some of our finest work from the past.</h2>
             </div>
             <div className="col-4">
                 <button type="submit" className="btn">Get Free Quotes</button>
