@@ -1,15 +1,15 @@
 import React from 'react';
-import OurOffice from './OurOffice';
-import CommonQuestion from './CommonQuestion';
-import About from './About';
-import Testimonials from './Testimonials';
-import BestSelling from './BestSelling';
-import BestWork from './BestWork';
-import TrendingDesign from './TrendingDesign';
-import Wedding from './Wedding.js';
-import Additional from './Additional';
-import Services from "./Services";
-import Home from './Home';
+import OurOffice from './OurOffice/OurOffice.js';
+import CommonQuestion from './AskQuestionPage/CommonQuestion.js';
+import About from './CustomerReviewPage/About.js';
+import Testimonials from '../Testimonials.js';
+import BestSelling from './ExploreMorePage/BestSelling.js';
+import BestWork from '../LandingPage/PastWorkPage/BestWork.js';
+import TrendingDesign from './TrandingPage/TrendingDesign.js';
+import Wedding from '../LandingPage/Weddings/Wedding.js';
+import Additional from './AdditionalForm/Additional.js';
+import Services from "./ServicePage/Services.js";
+import Home from './MainSectionPage/Home.js';
 let LandingPage =  ({
     homeRef,
     servicesRef,

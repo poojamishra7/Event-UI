@@ -1,5 +1,5 @@
 import React from 'react';
-import serviceJson from '../assets/json/services.json';
+import serviceJson from '../../../assets/json/services.json';
 const Additional = () => {
   const items = serviceJson.Additional || [];
   const sections = [items.slice(0, 3), items.slice(3, 6), items.slice(6)];

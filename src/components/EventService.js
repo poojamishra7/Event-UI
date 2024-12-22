@@ -4,14 +4,15 @@ import { useBreadcrumbs } from '../context/BreadcrumContext';
 import Breadcrumbs from '../components/Breadcrum';
 import { CartContext } from '../context/CartContext';
 import product_list from '../assets/json/services.json';
+import axios from 'axios';
 const FilterSection = ({ title, filters, setFilters }) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const fetchFilteredData = async () => {
     try {
-      const response = await axios.get('/api/data', {
-        params: { filters } 
-      });
-      console.log(response.data);
+      // const response = await axios.get('/api/data', {
+      //   params: { filters } 
+      // });
+      // console.log(response.data);
     } catch (error) {
       console.error('Error fetching filtered data:', error);
     }
@@ -56,7 +57,6 @@ const EventService = () => {
   const isSpecialService = pathSegments.includes('additional-service');
   const formattedOccasionType = occasionType.replace(/-/g, ' ');
   const { setBreadcrumbs } = useBreadcrumbs();
-
   // State for filters
   const [searchTerm, setSearchTerm] = useState('');
   const [priceFilters, setPriceFilters] = useState({
@@ -85,8 +85,12 @@ const EventService = () => {
     'sport': false,
     'carnival': false,
   });
+  const [products, setProducts] = useState([]);
   const { addToCart } = useContext(CartContext);
-  const products = product_list.Products || [];
+  const ServiceDetails = (item) => {
+    window.location.href = "/event-details/" + item.name;
+  };
+  // const products = (product_list && product_list.Products) || [];
   const resetSelection = () => {
     setSearchTerm('');
     setPriceFilters({
@@ -124,6 +128,20 @@ const EventService = () => {
       { label: formattedOccasionType || 'Event', path: `/events/${occasionType}` }
     ]);
   }, [occasionType, formattedOccasionType, setBreadcrumbs]);
+
+  useEffect(()=>{
+    const fetchData = async () => {
+      try {
+       const response = await axios.get('http://localhost:4400/simsons/service');
+       if (response && response.data && response.data.success) {
+        setProducts(response.data.services);
+      }
+      } catch (error) {
+        console.error("Error fetching cart details:", error);
+      }
+    };
+    fetchData();
+  },[]);
 
   return (
     <>
@@ -175,10 +193,10 @@ const EventService = () => {
             <div className="col-lg-9">
               <div className="service-section ss2">
                 <div className="cards-row">
-                  {products.map((item, index) => (
-                    <div className="card" key={index}>
+                  {products && products.map((item, index) => (
+                    <div className="card" key={index} onClick={()=> ServiceDetails(item)}>
                       <div className="card-image">
-                        <img src={`https://simsonseventimages.s3.ap-south-1.amazonaws.com/EventImages${item.image}`} alt={item.name} />
+                        <img src={item.imageURL[0].url} alt={item.imageURL[0].public_id} />
                         <div className="cart-icon">
                           <i className="fa-solid fa-cart-plus" onClick={() => addToCart(item)}></i>
                         </div>
@@ -187,11 +205,11 @@ const EventService = () => {
                         </div>
                       </div>
                       <div className="card-info">
-                        <p>{item.review.rating} <i className="fa fa-star"></i> <span>({item.review.total_reviews})</span></p>
-                        <h2>{item.name}</h2>
+                        <p>{item.review} <i className="fa fa-star"></i> <span>({item.noOfReview})</span></p>
+                        <h2>{item.productTitle}</h2>
                       </div>
                       <hr />
-                      <h6>Price <span>{item.price}</span></h6>
+                      <h6>Price <span>{item.productPrice}</span></h6>
                     </div>
                   ))}
                 </div>

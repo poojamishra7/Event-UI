@@ -1,9 +1,9 @@
     import React ,{useContext} from 'react';
-    import ProductCard from './ProductCart';
-    import Additional from './Additional';
-    import Wedding from './Wedding';
-    import CommonQuestion from './CommonQuestion';
-    import { CartContext } from '../context/CartContext';
+    import ProductCard from '../ProductCart';
+    import Additional from '../LandingPage/AdditionalForm/Additional';
+    import Wedding from '../LandingPage/Weddings/Wedding';
+    import CommonQuestion from '../LandingPage/AskQuestionPage/CommonQuestion';
+    import { CartContext } from '../../context/CartContext';
     const products = [
         { image: 'https://simsonseventimages.s3.ap-south-1.amazonaws.com/EventImages/Birthday/Image11.png', name: 'Garlands', price: '2000' },
         { image: 'https://simsonseventimages.s3.ap-south-1.amazonaws.com/EventImages/Weddings/Image2.png', name: 'Tablecloths', price: '3500' }

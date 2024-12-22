@@ -1,54 +1,52 @@
 {
     "Services": [
         {
-            "src": "/Birthday/Image7.png",
-            "title": "Birthday Party",
-            "description": "Turning Moments into Milestones"
-        },
-        {
             "src": "/Birthday/Image3.png",
             "title": "Wedding Decor",
-            "description": "Your Dream Wedding, Perfectly Planned"
+            "description": "Your Dream Wedding, Perfectly Planned",
+            "redirectTo": "/event/weddingdecor"
         },
         {
             "src": "/Weddings/Image2.png",
             "title": "Dj Service",
-            "description": "Begin Forever with Style"
+            "description": "Begin Forever with Style",
+            "redirectTo": "/event/djservice"
         },
         {
             "src": "/Birthday/Image12.png",
             "title": "Photography",
-            "description": "Celebrating Your Love Story"
+            "description": "Celebrating Your Love Story",
+            "redirectTo": "/event/photography"
         },
         {
             "src": "/Birthday/Image8.png",
             "title": "Makeup Artist",
-            "description": "Professional Events, Seamlessly Executed"
+            "description": "Professional Events, Seamlessly Executed",
+            "redirectTo": "/event/makeupartist"
         },
         {
             "src": "/Birthday/Image2.png",
             "title": "Fashion",
-            "description": "A Grand Welcome for Your Little One"
+            "description": "A Grand Welcome for Your Little One",
+            "redirectTo": "/event/fashion"
         },
         {
             "src": "/Birthday/Image11.png",
             "title": "Venue Consultation",
-            "description": "Opening Doors to New Beginnings"
+            "description": "Opening Doors to New Beginnings",
+            "redirectTo": "/event/venueconsultation"
         },
         {
             "src": "/Birthday/Image12.png",
             "title": "Emcee",
-            "description": "Celebrate Freedom in Style"
-        },
-        {
-            "src": "/Birthday/Image3.png",
-            "title": "Venue Consultation",
-            "description": "Showering Your Baby with Love"
+            "description": "Celebrate Freedom in Style",
+            "redirectTo": "/event/emcee"
         },
         {
             "src": "/Birthday/Image4.png",
             "title": "Other Occasions",
-            "description": "Bringing Festive Magic to Your Space"
+            "description": "Bringing Festive Magic to Your Space",
+            "redirectTo": "/event/otheroccasions"
         }
     ],
     "Trending_Design": {
@@ -236,5 +234,4 @@
             "price": "500"
         }
     ]
-    
 }

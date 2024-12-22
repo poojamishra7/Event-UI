@@ -1,5 +1,7 @@
 import React from 'react';
-import serviceJson from '../assets/json/services.json';
+import serviceJson from '../../../assets/json/services.json';
+import './Services.css';
+import { Link } from 'react-router-dom';
 const services =serviceJson.Services || [];
 const Services = () => {
   return (
@@ -11,9 +13,11 @@ const Services = () => {
         <div className="cards-row">
           {services.map((service, index) => (
             <div key={index} className="card">
+              <Link to={service.redirectTo} className="linkcss">
               <img src={`https://simsonseventimages.s3.ap-south-1.amazonaws.com/EventImages${service.src}`} alt={service.title} />
               <h2 className="card-title">{service.title}</h2>
               <p className="card-description">{service.description}</p>
+              </Link>
             </div>
           ))}
         </div>

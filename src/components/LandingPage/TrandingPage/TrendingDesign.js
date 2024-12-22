@@ -1,5 +1,5 @@
 import React from 'react';
-import serviceJson from '../assets/json/services.json';
+import serviceJson from '../../../assets/json/services.json';
 const design =serviceJson.Trending_Design || [];
 const TrendingDesign = () => {
     const imageUrlPre = 'https://simsonseventimages.s3.ap-south-1.amazonaws.com/EventImages';

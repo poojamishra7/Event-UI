@@ -1,15 +1,13 @@
-import React , {useState , useContext} from 'react'
-import {DataContext} from  '../context/DataContext';
-import PropTypes from 'prop-types';
-
-const Wedding = ({ title = 'Weddings', description = 'Weddings made Easy with Customized Design' }) => {
-    const [selectedCategory, setSelectedCategory] = useState('MANDAP');
+import React , {useContext, useState} from 'react';
+import {DataContext} from  '../../../context/DataContext';
+const BestSelling = () => {
+    const [selectedCategory, setSelectedCategory] = useState('weddings');
     const {data} = useContext(DataContext);
-    const {Wedding} = data;
+    const {BestSelling} = data;
     const handleCategoryClick = (category) => {
-      setSelectedCategory(category);
+        setSelectedCategory(category);
     };
-    const images = Wedding[selectedCategory] || [];
+    const images = BestSelling[selectedCategory] || [];
     const renderImages = (images) => {
         return (
           <>
@@ -41,34 +39,24 @@ const Wedding = ({ title = 'Weddings', description = 'Weddings made Easy with Cu
           </>
         );
       };
-    return (
-      <div className="weddings-section">
-        <div className="text-center">
-          <h1 className="mb-3">{title}</h1>
-          <p className="mb-5">{description}</p>
-  
-          <div className="row my-4">
-            {Object.keys(Wedding).map((item) => (
+  return (
+    <div className="best-selling">
+    <div className="container text-center mb-5">
+        <h1 className="mb-5">Explore more</h1>
+        <div className="row mb-4 align-item-justify text-justify">
+            {Object.keys(BestSelling).map((item) => (
               <div key={item} className="col-6 col-md-3">
-                <h4 data-category={item} onClick={() => handleCategoryClick(item)}
-                className={selectedCategory === item ? 'active-category' : ''}
-                >
-                  {item}
+                <h4 data-category={item} onClick={() => handleCategoryClick(item)} className={selectedCategory === item ? 'active-category' : ''}>
+                  {item.toUpperCase()}
                 </h4>
               </div>
             ))}
-          </div>
-          {renderImages(images)}
-  
-          <button type="submit" className="btn py-3">Get Free Quotes</button>
         </div>
-      </div>
-    );
-  };
-  
-  Wedding.propTypes = {
-    title: PropTypes.string,
-    description: PropTypes.string
-  };
-  
-  export default Wedding;
+        {renderImages(images)}
+        <button type="submit" className="btn py-3">Get Free Quotes</button>
+    </div>
+    </div>
+  )
+}
+
+export default BestSelling
